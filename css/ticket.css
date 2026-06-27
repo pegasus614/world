@@ -1,0 +1,247 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 90px; /* SPACE FOR FIXED BOTTOM NAV */
+  font-family: "Inter", sans-serif;
+  background: #f5f3f3;
+  color: #0c0c0c;
+}
+
+/* ---------- TOP NAV ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 16px;
+  background: linear-gradient(180deg, rgba(3, 3, 3, 0.98), rgba(3, 3, 3, 0.98));
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(4px);
+  color: #fff;
+}
+
+.top-left, .top-right {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  object-fit: cover;
+margin-right: -470px;
+}
+
+.top-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.help-link {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* ---------- TABS ---------- */
+.tabs {
+  position: sticky;
+  top: 60px;
+  z-index: 190;
+  display: flex;
+  background: #0c0c0c;
+  border-bottom: 1px solid rgba(7, 7, 7, 0.1);
+}
+
+.tabs div {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: rgba(255,255,255,0.1);
+  border-bottom: 3px solid #fff;
+}
+
+/* ---------- EVENTS ---------- */
+.events-container {
+  padding: 15px;
+}
+
+/* CARD */
+.event-card {
+  width: 103%;
+  max-width: 550px;
+  height: 420px;
+  margin: 15px auto;
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0a0a0a;
+  margin-bottom: 20px;
+  margin-left: -6px;
+}
+
+/* HOVER EFFECT */
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(253, 253, 253, 0.3);
+}
+
+/* IMAGE */
+.event-card img {
+  width: 100%;
+  height: 490px;
+  object-fit: cover; /* IMPORTANT: fills nicely */
+  display: block;
+  
+}
+
+/* INFO */
+.event-info {
+  padding: 15px;
+  color: #fff;
+}
+
+
+.event-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ---------- BOTTOM NAV ---------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #fcfbfb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  z-index: 300;
+}
+
+.nav-item {
+  text-align: center;
+  font-size: 12px;
+  color: #080808;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-item img.nav-icon {
+  width: 32px;
+  height: 28px;
+  margin-bottom: 4px;
+  object-fit: contain;
+}
+
+.nav-item.active {
+  color: #2a39be;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Large phones / small tablets */
+@media (max-width: 768px) {
+  .bottom-nav {
+    height: 72px;
+  }
+
+  .nav-item img.nav-icon {
+    width: 28px;
+    height: 26px;
+  }
+
+  .nav-item span {
+    font-size: 11px;
+  }
+}
+
+/* Normal phones */
+@media (max-width: 480px) {
+  .bottom-nav {
+    height: 68px;
+  }
+
+  .nav-item img.nav-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-item span {
+    font-size: 10.5px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .bottom-nav {
+    height: 64px;
+  }
+
+  .nav-item img.nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nav-item span {
+    font-size: 9.5px;
+  }
+}
+
+/* ----------- FIX HORIZONTAL SCROLL ON IPHONES ----------- */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Make wide elements fit inside viewport */
+  .event-card {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .flag-icon {
+    margin-left: 0 !important;
+  }
+}

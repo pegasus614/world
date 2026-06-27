@@ -1,0 +1,1328 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #df0c0c;
+}
+
+/* HERO */
+.hero-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 430px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* VIEW TICKET BUTTON */
+.hero-btn {
+  width: 94%;
+  background: #1212af;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin: -22px auto 0 auto;
+  position: relative;
+  z-index: 0;
+  margin-left: 30px;
+
+  margin: 0 auto 0 auto;
+  transform: translateY(3px); /* push it down a bit more */
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  background: rgb(250, 248, 248);
+  border-bottom: 1px solid #eee;
+
+  position: sticky;
+  top: 320px;
+  z-index: 1999;
+
+margin-top: 29px; /* increase from 12px */
+}
+
+/* CONTENT */
+.screen2-content {
+  margin-top: 540px;
+  z-index: 1999;
+  background-color: white;
+}
+
+.barcode-icon {
+  transition: 0.3s ease;
+}
+
+/* NORMAL STATE */
+.tabs {
+  position: sticky;
+  top: 320px;
+  transition: 0.3s ease;
+}
+
+/* COLLAPSED STATE (WHEN SCROLLING UP) */
+body.collapsed .barcode-icon {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  z-index: 9999;
+  opacity: 13px 13px;
+}
+
+body.collapsed .tabs {
+  position: fixed;
+  top: 300px; /* adjust if needed to cover View Ticket button */
+  left: 0;
+  width: 100%;
+  z-index: 1999;
+}
+.barcode-icon,
+.tabs {
+  transition: transform 0.2s ease;
+  will-change: transform;
+ 
+}
+.tabs,
+.barcode-icon {
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.ticket-count {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.hero-btn {
+  width: 89.8%;
+  background: #1212af;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* space between icon and text */
+  margin-left: 10px;
+}
+
+/* optional icon size fix */
+.barcode-icon {
+  font-size: 22px;
+}
+
+/* text styling */
+.btn-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  color: #999;
+}
+
+.tab.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* ORDER */
+.order-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+}
+
+
+body {
+  background: #f2f2f2;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ================= MAP ================= */
+.map-card {
+  width: 95% ;
+  margin: 15px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 170px;
+  border: 0;
+  display: block;
+}
+/* ================= BUTTON ================= */
+.directions-btn {
+  width: 90%;
+  margin: 10px auto;
+  background: #eee;
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ================= EVENT CARD ================= */
+.event-card-new {
+  position: relative;
+  width: 90%;
+  margin: 15px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.event-card-new img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.event-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  width: 70%;
+}
+
+.event-overlay h3 {
+  font-size: 13px;
+}
+
+.event-overlay span {
+  font-size: 11px;
+}
+
+.ticket-badge {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 10px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+/* ================= FLOATING ACTION ================= */
+.action-card {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 160px;
+  height: 60px;
+  background: #fff;
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #070707;
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #352bc2;
+  fill: none;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background: #ddd;
+}
+
+.ticket-block {
+  margin-bottom: 15px;
+}
+
+/* HEADER ABOVE TICKET */
+.ticket-header-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fdfdfd;
+  margin-bottom: 3px;
+  padding-left: 2px;
+  letter-spacing: 0.5px;
+   background: #e7e4e4;
+  width: 90%;
+  margin-left: 20px;
+  color: #000;
+  height: 50px;
+
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+/* TICKET ROW */
+.ticket-item {
+  display: flex;
+  justify-content: space-between;
+  background: #e7e4e4;
+  padding: 12px;
+  border-radius: 2px;
+  text-align: center;
+  width: 90%;
+  margin-left: 20px;
+  color: #000;
+  height: 80px;
+  
+}
+
+.ticket-item .col {
+  flex: 1;
+}
+
+.label {
+  font-size: 10px;
+  color: #1b1919;
+  letter-spacing: 1px;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+
+/* CLOSE + HELP */
+.close-icon,
+.help-text {
+  position: absolute;
+  top: 15px;
+  color: white;
+}
+
+.close-icon { left: 15px; }
+.help-text { right: 15px; }
+
+/* end of screen two 
+
+/*============= start of screen 3 ========== */
+
+/* screen 3 start here ---*/
+:root {
+  --blue: #1c5cb4;
+  --blue-weak: #eaf3ff;
+  --card-bg: #fff;
+  --muted: #777;
+}
+
+/* Transfer Container */
+.transfer-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-height: 45vh; /* fits mobile screens */
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  z-index: 99;
+  animation: slideHalfUp 0.4s ease forwards;
+  padding-bottom: 20px;
+  height: 250px;
+}
+
+.transfer-container.show {
+  display: block;
+}
+
+.ticket-details {
+  text-align: left;
+  margin: 15px 5%;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1c5cb4;
+  margin-top: 190px;
+}
+
+@keyframes slideHalfUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: #fbfbfb;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 12px 5%;
+  font-size: 13px;
+  color: #777;
+}
+
+.info-box i {
+  background: #dfe7f6;
+  color: var(--blue);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ticket Header */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin: 12px 5%;
+  font-size: 15px;
+}
+
+.ticket-count {
+  color: var(--muted);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Seat Container */
+.seat-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 5%;
+  justify-content: flex-start;
+}
+
+/* Seat Card */
+.seat-card {
+  width: 28%; /* 3 seats per row on small screens */
+  min-width: 70px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+  position: relative;
+}
+
+.seat-top {
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 8px 6px;
+  font-weight: 700;
+  font-size: 13px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.seat-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seat-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid var(--blue);
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Selected seat */
+.seat-card.selected {
+  background: var(--blue-weak);
+  border: 2px solid var(--blue);
+  box-shadow: 0 8px 20px rgba(28, 92, 180, 0.12);
+}
+
+.seat-card.selected .seat-dot {
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: none;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  border-top: 1px solid #eee;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.transfer-link {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.transfer-link {
+  display: block;
+  text-align: right;
+  margin: 60px 5% 20px; /* top right bottom left */
+  margin-top: -30px;
+  font-size: 12px;
+}
+
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .seat-card {
+    width: 10%; /* 3 per row on mobile */
+    height: 85px;
+  }
+
+  .seat-top {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+
+  .seat-dot {
+    width: 22px;
+    height: 22px;
+  }
+
+  .header {
+    font-size: 13px;
+  }
+
+  .ticket-header, .ticket-count, .bottom-bar {
+    margin: 10px 4%;
+    font-size: 13px;
+  }
+
+  .info-box {
+    margin: 10px 4%;
+  }
+
+  .transfer-container {
+  height: 100%;
+  max-height: 100%;
+}
+/* ------ screen 3 ens here --------------------------------- */
+
+/* ---------- 🧾 SCREEN 4 (TRANSFER FORM) ---------- */
+/* BODY */
+.transfer-body {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.transfer-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* OPTIONS (MAIN FIX HERE) */
+.transfer-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  border: 2px solid #1c5cb4;
+  border-radius: 5px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  color: #1c5cb4;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TEXT CENTERED */
+.option-text {
+  width: 100%;
+  text-align: center;
+}
+
+/* ICON POSITIONED RIGHT */
+.transfer-option i {
+  position: absolute;
+  right: 15px;
+  font-size: 18px;
+}
+
+/* CENTER IMAGE */
+.transfer-image {
+  margin: 25px 0;
+}
+
+.transfer-image img {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+/* TEXT */
+.transfer-heading {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.transfer-sub {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* BOTTOM BACK */
+.bottom-back {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1c5cb4;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bottom-back i {
+  font-size: 16px;
+}
+.transfer-divider {
+  width: 160%;
+  margin: 10px auto 20px;
+  border: none;
+  border-top: 1px solid #272626;
+}
+
+/* ---------- 🟣 SCREEN 5 (start here )===================== ---------- */
+/* GLOBAL FIX (IMPORTANT) */
+* {
+  box-sizing: border-box;
+}
+
+/* SCREEN WRAPPER */
+.screen {
+  width: 100%;
+  min-height: 57vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f5f5f5;
+}
+
+/* FORM BODY */
+.form-body {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px 15px;
+  background: #fff;
+}
+
+/* TITLE */
+.form-title {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* LABELS */
+.form-body label {
+  font-size: 13px;
+  margin-top: 3px;
+  display: block;
+  color: #333;
+}
+
+/* INPUTS */
+.form-body input,
+.form-body textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border: 1px solid #0e0d0d;
+  border-radius: 2px;
+
+  /* FIX: prevents mobile zoom on focus */
+  font-size: 18px;
+}
+
+/* TEXTAREA */
+.form-body textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* SWITCH LINK */
+.switch-link {
+  color: #1c5cb4;
+  font-size: 15px;
+  margin: 5px 0 10px;
+  cursor: pointer;
+}
+
+/* REMOVE DEFAULT A STYLING ISSUE */
+a {
+  text-decoration: underline;
+  color: #1c5cb4;
+}
+
+/* BOTTOM ACTIONS */
+.form-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* BACK */
+.back-action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1c5cb4;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.submit-btn {
+  background: black;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* DIVIDER */
+.mid-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 10px 0 15px;
+}
+
+/* ================= SCREEN 6 ================= */
+#screen6 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  background: #f7f3f3;
+  padding: 15px;
+
+  z-index: 1000;
+
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+
+  display: block;
+  overflow-y: auto;
+}
+
+#screen6.active {
+  transform: translateX(0);
+}
+
+
+/* ================= HEADER ================= */
+
+.ticket-header-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+
+  font-family: -apple-system, BlinkMacSystemFont,
+  "SF Pro Display", "SF Pro Text",
+  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ticket-header-bar i {
+  font-size: 20px;
+}
+
+.event-text h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.event-text p {
+  font-size: 12px;
+  color: #777;
+  margin: 2px 0;
+}
+
+
+/* ================= CAROUSEL ================= */
+
+.cards-wrapper {
+  display: flex;
+  gap: 15px;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+
+  padding-bottom: 10px;
+}
+
+.cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ================= CARD ================= */
+
+.ticket-card {
+  flex: 0 0 85%;
+
+  scroll-snap-align: center;
+
+  background: #fff;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  margin-bottom: 30px;
+
+  height: auto;
+  width: 100%;
+}
+
+
+/* ================= IMAGE ================= */
+
+.ticket-image {
+  position: relative;
+
+  width: 100%;
+  height: 540px;
+
+  background: #faf9f9;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+
+.ticket-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* ================= BLUE LINE ================= */
+
+.blue-line {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 10px;
+
+  background: #faf9f9;
+}
+
+
+/* ================= BARCODE ================= */
+
+.barcode {
+  position: absolute;
+
+  top: 16px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #faf9f9;
+
+  padding: 8px;
+
+  border-radius: 6px;
+
+  width: 92%;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* ================= SCAN LINE ================= */
+
+.scan-line {
+  position: absolute;
+
+  top: 0;
+  left: -10%;
+
+  width: 10%;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(46,13,231,0.6),
+    transparent
+  );
+
+  animation: scanPingPong 1.2s linear infinite;
+
+  pointer-events: none;
+}
+
+
+@keyframes scanPingPong {
+
+  0% {
+    left: -10%;
+  }
+
+  100% {
+    left: 100%;
+  }
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+.bottom-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+  padding: 0 10px 10px;
+}
+
+
+.wallet-btn {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: #000;
+
+  color: #fff;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+
+.wallet-btn img {
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+}
+
+
+.info-btn {
+  flex: 1;
+
+  background: #fff;
+
+  border: 1px solid #ccc;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+
+.info-btn i {
+  font-size: 16px;
+}
+
+
+/* ================= INDICATOR ================= */
+
+.indicator {
+  padding: 8px 14px;
+
+  background: #f8f6f6;
+
+  color: #0e0d0d;
+
+  font-size: 12px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  margin: 12px auto;
+
+  width: fit-content;
+
+  display: block;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+
+/* ================= SCREEN 7 BOTTOM SHEET ================= */
+
+#screen7 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 70vh;
+
+  background: #f5f5f5;
+  z-index: 1000;
+
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+
+  overflow-y: auto;
+  padding: 15px;
+
+  display: block;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ACTIVE STATE */
+#screen7.active {
+  transform: translateY(0);
+}
+
+/* drag handle */
+.drag-handle {
+  width: 40px;
+  height: 4px;
+  background: #ccc;
+  border-radius: 10px;
+  margin: 10px auto 20px;
+}
+
+/* header */
+.screen7-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-btn {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+.screen7-header h2 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* divider */
+.divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 15px 0;
+}
+
+/* accordion */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* content */
+.accordion-content {
+  margin-top: 15px;
+}
+
+/* info */
+.info-block {
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+}
+
+.value {
+  font-size: 14px;
+  color: #222;
+}
+
+/* price */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.price-row.bold {
+  font-weight: 700;
+}
+#screen6 {
+  z-index: 1000;
+}
+
+#screen7 {
+  z-index: 2000;
+}
+
+body.hide-screen2-header .hero-wrapper {
+  display: none;
+}
+#screen2.locked {
+  pointer-events: none;
+  overflow: hidden;
+}
+/* Base screen (Screen 2 / main UI) */
+#screen2 {
+  z-index: 1;
+  position: relative;
+}
+
+/* Screen 6 (full page overlay) */
+#screen6 {
+  z-index: 1000;
+}
+
+/* Screen 7 (bottom sheet above screen 6) */
+#screen7 {
+  z-index: 2000;
+}
+
+/* =========================
+   FIX: SCREEN 3–5 BOTTOM SHEETS (CLEAN)
+   ========================= */
+
+#screen3,
+#screen4,
+#screen5 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 100%;
+  
+  height: 50vh;
+
+  background: #fff;
+  z-index: 1000;
+
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+
+  overflow-y: auto;
+
+  display: block !important;
+}
+
+/* ACTIVE STATE */
+#screen3.active,
+#screen4.active,
+#screen5.active {
+  transform: translateY(0);
+}
+
+/* STACK ORDER */
+#screen3 { z-index: 1100; }
+#screen4 { 
+  z-index: 1200; 
+  width: 100%;
+}
+
+#screen5 { z-index: 1300; }
+
+/* 🔧 FIX SCREEN 4 WIDTH ISSUE */
+#screen4 .transfer-body {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+
+#screen3.active {
+  transform: translateY(0);
+  width: 100%;
+  max-width: 100%;
+  height: 30vh !important;
+}
+#screen4.active,
+#screen5.active {
+  transform: translateY(0);
+  width: 100%;
+  max-width: 100%;
+  height: 63vh;
+}
+
+/* ================= FIX SCREEN 4 WIDTH ISSUE ================= */
+
+/* force screen 4 not to exceed viewport */
+#screen4 {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* fix inner layout from causing overflow */
+#screen4 .transfer-body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+
+/* prevent options from pushing layout wider */
+#screen4 .transfer-option {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  box-sizing: border-box;
+}
+
+/* fix divider weird width behavior */
+#screen4 .transfer-divider {
+  width: 100%;
+  margin: 10px 0 20px;
+}
+
+/* global safety (important for mobile overflow bugs) */
+* {
+  box-sizing: border-box;
+}
+}
